@@ -1,0 +1,26 @@
+
+<div class = 'container color-dark'>
+  <div class="col">
+    <p>Add a content</p>
+    <hr>
+    <div class="col">
+      <p class="sm">use this form to add new content</p>
+      <form>
+        <input type='text' class = "txt" name = 'item' placeholder="content" [(ngModel)]="goalContent">
+        <br><span>{{goalContent}}</span>
+        <input type="submit" class = "btn" value = "{{btnText}}" (click)="addContent()">
+      </form>
+    </div>
+  </div>
+  <div class="col-md-offset-6">
+    <p>Content list ({{contentCount}})</p>
+    <hr>
+    <div class = 'container color-light'>
+      <div class="col">
+        <p class = "" *ngFor="let goal of goals">
+            {{goal}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
